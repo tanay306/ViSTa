@@ -20,6 +20,12 @@ const courseSchema = new mongoose.Schema({
     price: {
         type: String,
     },
+    quiz1Marks: {
+        type: Number
+    },
+    quiz2Marks: {
+        type: Number
+    }
 });
 
 courseSchema.plugin(passportLocalMongoose);
