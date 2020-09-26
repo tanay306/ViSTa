@@ -9,6 +9,8 @@ import SignInSide from './SignInSide';
 import SignUp from './SignUp'; 
 import CardOptions from './CardOptions';
 import TextArea from './TextArea';
+import CodeEditor from './CodeEditor';
+import QuestionCard from './QuestionCard/QuestionCard';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -23,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   link: {
+    textDecoration:'none',
     margin: theme.spacing(1, 1.5),
   },
 }));
@@ -53,10 +56,10 @@ export default function UserRouter() {
             {/* For sm-xl screen sizes */}
             <Box display={{ xs: 'none', sm: 'block' }}>
                 <Link to="/logIn">
-                 <Button href="#" color="primary" variant="outlined" className={classes.link}>Login</Button>
+                 <Button href="#" color="primary"  text-decoration="none" variant="contained" className={classes.link}>Login</Button>
                 </Link>
                 <Link to="/register">
-                  <Button href="#" color="primary" variant="outlined" className={classes.link}>Sign Up</Button>
+                  <Button href="#" color="primary" style={{textDecoration : 'none'}}variant="contained" className={classes.link}>Sign Up</Button>
                 </Link>
             </Box>
             {/* for xs screen size */}
@@ -77,9 +80,10 @@ export default function UserRouter() {
       <Switch>
         <Route path="/login"><SignInSide/></Route>
         <Route path="/register"><SignUp /></Route>
-        {/* <Route path="/dashboard"><Dashboard /></Route> */}
+        <Route path="/codeEditor"><CodeEditor /></Route>
         <Route path="/cardOptions"><CardOptions /></Route>
         <Route path="/textArea"><TextArea /></Route>
+        <Route path="/questionCard"><QuestionCard /></Route>
         <Route exact path="/"><Home /></Route>
       </Switch>
       </Router>

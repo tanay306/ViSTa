@@ -9,7 +9,7 @@ const TextArea=()=>{
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    //display: 'block',
+    display: 'block',
     padding: '20px'
   },
   media:{
@@ -17,13 +17,13 @@ const useStyles = makeStyles((theme) => ({
     width:500,
     padding:'1%',
     width: '100%',
-    height: '100px !important'
+    height: '200px !important'
   },
   submit: {
     margin: theme.spacing(1,1,1),
   },
   form: {
-    display: 'flex',
+    
     alignItems: 'center'
   }
   
@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   }
   return (
     <div className={classes.root}>
+       <h2>Enter your response</h2>   
     <form onSubmit={handleSubmit} className={classes.form}>
     <TextareaAutosize className={classes.media}
      // rowsMax={200}
@@ -47,6 +48,10 @@ const useStyles = makeStyles((theme) => ({
       aria-label="maximum height"
       placeholder="Input your response"
       onChange={e => setText((e.target.value))}
+      style={{ 
+        fontSize: 20,
+        
+      }}
     />
    <Button
             type="submit"
