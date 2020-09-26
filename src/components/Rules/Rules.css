@@ -10,7 +10,7 @@
 
 .Rules-block ul li{
     margin: 15px auto;
-    border-left: 3px var(--filterColor) solid;
+    border-left: 3px #5B32E2 solid;
     padding-left: 10px;
 }
 

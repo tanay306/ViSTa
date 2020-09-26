@@ -5,6 +5,8 @@ import '../Rules/Rules.css';
 const Rules = props => {
     return (
         <div className='Rules-block'>
+            <h2 style={{textTransform: 'uppercase', letterSpacing: 6, textAlign: 'center'}}>Student Evaluation Quiz</h2>
+            <hr />
             <ul>
                 <li>
                     Click on the desired option to automatically save and proceed.

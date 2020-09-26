@@ -39,6 +39,7 @@ const QuestionCard = props => {
     }
     return (
         <>
+        <p style={{backgroundColor: '#5B32E2', width: "100%", margin: 0, height: 50, paddingTop: 25}}>NavBar</p>
         <Rules />
         <div className='QuestionCard-block'>
             <form onSubmit={(e) => {
