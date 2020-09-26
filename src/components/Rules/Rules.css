@@ -1,0 +1,27 @@
+.Rules-block{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+
+.Rules-block ul{
+    padding: 10px;
+}
+
+.Rules-block ul li{
+    margin: 15px auto;
+    border-left: 3px var(--filterColor) solid;
+    padding-left: 10px;
+}
+
+@media(max-width:768px){
+    .Rules-block{
+        width: 80%;
+    }
+}
+
+@media(max-width:500px){
+    .Rules-block{
+        width: 90%;
+    }
+}
