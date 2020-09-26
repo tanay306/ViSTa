@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 mongoose.set('useFindAndModify', false);
 const passportLocalMongoose = require("passport-local-mongoose");
 
-////////////////////----- Project Schema -----////////////////////
+////////////////////----- Course Schema -----////////////////////
 
 const courseSchema = new mongoose.Schema({
     username : {
@@ -23,8 +23,14 @@ const courseSchema = new mongoose.Schema({
     quiz1Marks: {
         type: Number
     },
-    quiz2Marks: {
+    finalquizMarks: {
         type: Number
+    },
+    quiz1: {
+        type: String
+    },
+    finalQuiz: {
+        type: String
     }
 });
 

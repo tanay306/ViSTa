@@ -113,6 +113,21 @@ app.get("/allcourse", async (req, res) => {
   res.send(allCourse)
 })
 
+app.put("/courses/:courseId", async (req, res) => {
+  const course = await Course.findByIdAndUpdate(req.params.courseId, {$set: req.body}, {new: true});
+  res.send(course);
+})
+app.get("/courses/:courseId", async (req, res) => {
+  const course = await Course.findById(req.params.courseId);
+  res.send(course.quiz1);
+  //json parse se nahi hogaa
+});
+app.get("/course/:courseId", async (req, res) => {
+    const course = await Course.findById(req.params.courseId).populate();
+    res.send(course);
+})
+
+
 
 /////--Server has started message--/////
 
