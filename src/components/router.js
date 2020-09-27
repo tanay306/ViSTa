@@ -4,7 +4,7 @@ import { AppBar, Button, CssBaseline, Toolbar, Typography, Box,IconButton } from
 import { makeStyles } from '@material-ui/core/styles';
 import { ExitToApp, PersonAdd } from '@material-ui/icons';
 import MenuIcon from '@material-ui/icons/Menu';
-import Home from './Home';
+import Home from './Home/Home';
 import SignInSide from './SignInSide';
 import SignUp from './SignUp'; 
 import CardOptions from './CardOptions';
@@ -16,17 +16,24 @@ import QuestionCard from './QuestionCard/QuestionCard';
 const useStyles = makeStyles((theme) => ({
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
+    backgroundColor: `#ff416`
   },
+  a:{
+    textDecoration: "none"
+},
 
   toolbar: {
-    flexWrap: 'wrap',
+   flexWrap: 'wrap',
+   
   },
   toolbarTitle: {
     flexGrow: 1,
   },
   link: {
     textDecoration:'none',
-    margin: theme.spacing(1, 1.5),
+    margin: theme.spacing(1),
+    
+
   },
 }));
 
@@ -40,37 +47,31 @@ export default function UserRouter() {
       
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            <Link to="/">
-            <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            href="/"
-          >
-            <MenuIcon />
-          </IconButton>
+            <Link to="/"className={classes.link}>
+               {/* <h3>iLearn</h3> */}
+                <b style={{float:"left"}}>iLearn</b>
               {/* <img src={require('../assets/images/vuberlogo.png')} height="60" alt="logo" /> */}
             </Link>
           </Typography>
          
             {/* For sm-xl screen sizes */}
             <Box display={{ xs: 'none', sm: 'block' }}>
-                <Link to="/logIn">
+                <Link to="/logIn" className={classes.link}>
                  <Button href="#" color="primary"  text-decoration="none" variant="contained" className={classes.link}>Login</Button>
                 </Link>
-                <Link to="/register">
+                <Link to="/register" className={classes.link}>
                   <Button href="#" color="primary" style={{textDecoration : 'none'}}variant="contained" className={classes.link}>Sign Up</Button>
                 </Link>
             </Box>
             {/* for xs screen size */}
             <Box display={{ xs: 'block', sm: 'none' }}>
                 <Link to="/logIn">
-                  <Button href="#" color="primary">
+                  <Button href="#" color="primary" >
                     <ExitToApp className={classes.link} />
                   </Button>
                 </Link>
                 <Link to="/register">
-                  <Button href="#" color="primary">
+                  <Button href="#" color="primary" >
                     <PersonAdd className={classes.link} />
                   </Button>
                 </Link>

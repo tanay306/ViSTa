@@ -28,7 +28,7 @@ const handleSubmit = (e) => {
 }
  
     return (
-    <div>    
+    <div style={{ padding: '1%' }}>    
      <h2>Enter your code</h2>   
      <form onSubmit={handleSubmit} > 
       <Editor
@@ -37,10 +37,24 @@ const handleSubmit = (e) => {
         highlight={code => highlight(code, languages.js)}
         padding={10}
         style={{ 
-          fontSize: 20,
+          fontSize: 18,
+          backgroundColor: 'black',
+          color: "white",
+          maxHeight: '600px',
+          height: '600px',
+          overflowY: 'scroll' 
         }}
         
       />
+        <Button
+            href="/cardOptions"
+            halfWidth
+            variant="contained"
+            color="primary"
+           // className={classes.submit}
+          >
+            Back
+          </Button>
       <Button
             type="submit"
             halfWidth
@@ -50,6 +64,7 @@ const handleSubmit = (e) => {
           >
             Submit
           </Button>
+        
           </form>
       </div>
     );

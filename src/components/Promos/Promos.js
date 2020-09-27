@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Promos.css';
+import './Promos.css';
 
 import { Avatar } from '@material-ui/core'
 

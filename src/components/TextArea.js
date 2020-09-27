@@ -17,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
     width:500,
     padding:'1%',
     width: '100%',
-    height: '200px !important'
+    height: '600px !important',
+    maxHeight: '600px !important',
+    overflow: 'scroll !important'
   },
   submit: {
     margin: theme.spacing(1,1,1),
@@ -53,6 +55,15 @@ const useStyles = makeStyles((theme) => ({
         
       }}
     />
+    <Button
+            href="/cardOptions"
+            halfWidth
+            variant="contained"
+            color="primary"
+           // className={classes.submit}
+          >
+            Back
+          </Button> 
    <Button
             type="submit"
             halfWidth
@@ -62,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
           >
             Submit
           </Button>
+         
     </form>
    
    </div>  

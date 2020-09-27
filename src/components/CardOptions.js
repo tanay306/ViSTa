@@ -16,16 +16,12 @@ const CardOptions = () => {
       display: 'flex',
       justifyContent: 'space-evenly',
       alignItems: 'center',
-      margin: '50px'
-      // '& > *': {
-      //   margin: theme.spacing(10),
-      //   // width: theme.spacing(50),
-      //   // height: theme.spacing(50),
-      // },
+      margin: '50px',
+      font:'Arial'
     },
     media: {
-      height: 220,
-      width:220
+      height: `200%`,
+      width:`200%`
     },
   }));
   
