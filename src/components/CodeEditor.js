@@ -40,8 +40,8 @@ const handleSubmit = (e) => {
           fontSize: 18,
           backgroundColor: 'black',
           color: "white",
-          maxHeight: '600px',
-          height: '600px',
+          maxHeight: `600px`,
+          height: `300px`,
           overflowY: 'scroll' 
         }}
         
