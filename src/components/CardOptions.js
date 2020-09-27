@@ -20,8 +20,8 @@ const CardOptions = () => {
       font:'Arial'
     },
     media: {
-      height: `200%`,
-      width:`200%`
+      height: 200,
+      width:200
     },
   }));
   
