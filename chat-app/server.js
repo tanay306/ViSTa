@@ -15,7 +15,7 @@ const io = socketio(server);
 //set static folder
 app.use(express.static(path.join(__dirname, "public")));
 
-const botname = "WhatsOn Bot";
+const botname = "Course Bot";
 
 //run when a client connects
 io.on("connection", socket => {
