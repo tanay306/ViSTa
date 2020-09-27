@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
             halfWidth
             variant="contained"
             color="primary"
-           // className={classes.submit}
+          // className={classes.submit}
           >
             Back
           </Button> 
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
             halfWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
+            //className={classes.submit}
           >
             Submit
           </Button>
