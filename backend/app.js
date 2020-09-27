@@ -114,9 +114,23 @@ app.get("/allcourse", async (req, res) => {
 })
 
 app.put("/courses/:courseId", async (req, res) => {
-  const course = await Course.findByIdAndUpdate(req.params.courseId, {$set: req.body}, {new: true});
+  if (req.isAuthenticated() && req.user.role == "admin") {
+    const course = await Course.findByIdAndUpdate(req.params.courseId, {$set: req.body}, {new: true});
   res.send(course);
+  } else {
+    res.send("Restricted access")
+  } 
 })
+
+app.put("/user/:userId", async (req, res) => {
+  if (req.isAuthenticated() && req.user.role == "admin") {
+    const user = await User.findByIdAndUpdate(req.params.courseId, {$set: req.body}, {new: true});
+    res.send(user);
+  } else {
+    res.send("Restricted access")
+  }
+});
+
 app.get("/courses/:courseId", async (req, res) => {
   const course = await Course.findById(req.params.courseId);
   res.send(course.quiz1);
