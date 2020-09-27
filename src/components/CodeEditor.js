@@ -46,12 +46,14 @@ const handleSubmit = (e) => {
         }}
         
       />
+      <div style={{display:"flex",justifyContent:"space-evenly",width:`50%`,margin:"auto"}}>
         <Button
             href="/cardOptions"
             halfWidth
             variant="contained"
             color="primary"
            // className={classes.submit}
+           
           >
             Back
           </Button>
@@ -61,10 +63,11 @@ const handleSubmit = (e) => {
             variant="contained"
             color="primary"
            // className={classes.submit}
+           
           >
             Submit
           </Button>
-        
+          </div>
           </form>
       </div>
     );

@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
         
       }}
     />
+     <div style={{display:"flex",justifyContent:"space-evenly",width:`50%`,margin:"auto"}}>
     <Button
             href="/cardOptions"
             halfWidth
@@ -73,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
           >
             Submit
           </Button>
-         
+          </div>    
     </form>
    
    </div>  
