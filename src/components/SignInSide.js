@@ -65,7 +65,7 @@ export default function SignInSide() {
           </Typography>
             <GoogleLogin
     clientId="184577954974-pe1kq14kr8179el5q0nkkdhcfkk1iq50.apps.googleusercontent.com"
-    buttonText="SigIn with Google"
+    buttonText="SignIn with Google"
     onSuccess={responseGoogle}
     onFailure={responseGoogle}
     cookiePolicy={'single_host_origin'}

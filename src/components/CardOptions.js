@@ -12,26 +12,22 @@ import Typography from '@material-ui/core/Typography';
 
 const CardOptions = () => {
   const useStyles = makeStyles((theme) => ({
-    root: {
+    cardroot: {
       display: 'flex',
       justifyContent: 'space-evenly',
       alignItems: 'center',
-      margin: '50px'
-      // '& > *': {
-      //   margin: theme.spacing(10),
-      //   // width: theme.spacing(50),
-      //   // height: theme.spacing(50),
-      // },
+      margin: '50px',
+      font:'Arial'
     },
     media: {
-      height: 220,
-      width:220
+      height: 200,
+      width:200
     },
   }));
   
       const classes = useStyles();  
   return (
-    <div className={classes.root}>
+    <div>
        <Card className={classes.cardRoot}>
      
       <CardActionArea>
@@ -41,9 +37,9 @@ const CardOptions = () => {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          {/* <Typography gutterBottom variant="h5" component="h2"> */}
            Text upload
-          </Typography>
+          {/* </Typography> */}
         </CardContent>
       </CardActionArea>
       <CardActions>

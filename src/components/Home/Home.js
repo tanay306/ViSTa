@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import '../Home/Home.css';
+import './Home.css';
 
-import Course1 from "../../assets/images/course1.jpg";
-import Course2 from "../../assets/images/course2.jpg";
+import Course1 from "../assets/images/course1.jpg";
+import Course2 from "../assets/images/course2.jpg";
 
-import Promos from '../../components/Promos/Promos';
+import Promos from '../Promos/Promos';
 
 const Home = () => {
     const [popularCourse, setPopularCourse] = useState([
